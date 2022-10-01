@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>
+        IML Final Project - HackMD
+    </title>
+    <link rel="icon" type="image/png" href="https://hackmd.io/favicon.png">
+    <link rel="apple-touch-icon" href="https://hackmd.io/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" integrity="sha256-3iu9jgsy9TpTwXKb7bNQzqWekRX7pPK+2OLj3R922fo=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css" integrity="sha256-QiWfLIsCT02Sdwkogf6YMiQlj4NE84MKkzEMkZnMGdg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css" integrity="sha256-vtR0hSWRc3Tb26iuN2oZHt3KRUomwTufNIf5/4oeCyg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/css/basic/emojify.min.css" integrity="sha256-UOrvMOsSDSrW6szVLe8ZDZezBxh5IoIfgTwdNDgTjiU=" crossorigin="anonymous" />
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i|Source+Code+Pro:300,400,500|Source+Sans+Pro:300,300i,400,400i,600,600i|Source+Serif+Pro&subset=latin-ext);.hljs{display:block;background:#fff;padding:.5em;color:#333;overflow-x:auto}.hljs-comment,.hljs-meta{color:#969896}.hljs-emphasis,.hljs-quote,.hljs-string,.hljs-strong,.hljs-template-variable,.hljs-variable{color:#df5000}.hljs-keyword,.hljs-selector-tag,.hljs-type{color:#a71d5d}.hljs-attribute,.hljs-bullet,.hljs-literal,.hljs-number,.hljs-symbol{color:#0086b3}.hljs-built_in,.hljs-builtin-name{color:#005cc5}.hljs-name,.hljs-section{color:#63a35c}.hljs-tag{color:#333}.hljs-attr,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-selector-pseudo,.hljs-title{color:#795da3}.hljs-addition{color:#55a532;background-color:#eaffea}.hljs-deletion{color:#bd2c00;background-color:#ffecec}.hljs-link{text-decoration:underline}.markdown-body{font-size:16px;line-height:1.5;word-wrap:break-word}.markdown-body:after,.markdown-body:before{display:table;content:""}.markdown-body:after{clear:both}.markdown-body>:first-child{margin-top:0!important}.markdown-body>:last-child{margin-bottom:0!important}.markdown-body a:not([href]){color:inherit;text-decoration:none}.markdown-body .absent{color:#c00}.markdown-body .anchor{float:left;padding-right:4px;margin-left:-20px;line-height:1}.markdown-body .anchor:focus{outline:none}.markdown-body blockquote,.markdown-body dl,.markdown-body ol,.markdown-body p,.markdown-body pre,.markdown-body table,.markdown-body ul{margin-top:0;margin-bottom:16px}.markdown-body hr{height:.25em;padding:0;margin:24px 0;background-color:#e7e7e7;border:0}.markdown-body blockquote{font-size:16px;padding:0 1em;color:#777;border-left:.25em solid #ddd}.markdown-body blockquote>:first-child{margin-top:0}.markdown-body blockquote>:last-child{margin-bottom:0}.markdown-body kbd,.popover kbd{display:inline-block;padding:3px 5px;font-size:11px;line-height:10px;color:#555;vertical-align:middle;background-color:#fcfcfc;border:1px solid #ccc;border-bottom-color:#bbb;border-radius:3px;box-shadow:inset 0 -1px 0 #bbb}.markdown-body .loweralpha{list-style-type:lower-alpha}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{margin-top:24px;margin-bottom:16px;font-weight:600;line-height:1.25}.markdown-body h1 .octicon-link,.markdown-body h2 .octicon-link,.markdown-body h3 .octicon-link,.markdown-body h4 .octicon-link,.markdown-body h5 .octicon-link,.markdown-body h6 .octicon-link{color:#000;vertical-align:middle;visibility:hidden}.markdown-body h1:hover .anchor,.markdown-body h2:hover .anchor,.markdown-body h3:hover .anchor,.markdown-body h4:hover .anchor,.markdown-body h5:hover .anchor,.markdown-body h6:hover .anchor{text-decoration:none}.markdown-body h1:hover .anchor .octicon-link,.markdown-body h2:hover .anchor .octicon-link,.markdown-body h3:hover .anchor .octicon-link,.markdown-body h4:hover .anchor .octicon-link,.markdown-body h5:hover .anchor .octicon-link,.markdown-body h6:hover .anchor .octicon-link{visibility:visible}.markdown-body h1 code,.markdown-body h1 tt,.markdown-body h2 code,.markdown-body h2 tt,.markdown-body h3 code,.markdown-body h3 tt,.markdown-body h4 code,.markdown-body h4 tt,.markdown-body h5 code,.markdown-body h5 tt,.markdown-body h6 code,.markdown-body h6 tt{font-size:inherit}.markdown-body h1{font-size:2em}.markdown-body h1,.markdown-body h2{padding-bottom:.3em;border-bottom:1px solid #eee}.markdown-body h2{font-size:1.5em}.markdown-body h3{font-size:1.25em}.markdown-body h4{font-size:1em}.markdown-body h5{font-size:.875em}.markdown-body h6{font-size:.85em;color:#777}.markdown-body ol,.markdown-body ul{padding-left:2em}.markdown-body ol.no-list,.markdown-body ul.no-list{padding:0;list-style-type:none}.markdown-body ol ol,.markdown-body ol ul,.markdown-body ul ol,.markdown-body ul ul{margin-top:0;margin-bottom:0}.markdown-body li>p{margin-top:16px}.markdown-body li+li{padding-top:.25em}.markdown-body dl{padding:0}.markdown-body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}.markdown-body dl dd{padding:0 16px;margin-bottom:16px}.markdown-body table{display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}.markdown-body table th{font-weight:700}.markdown-body table td,.markdown-body table th{padding:6px 13px;border:1px solid #ddd}.markdown-body table tr{background-color:#fff;border-top:1px solid #ccc}.markdown-body table tr:nth-child(2n){background-color:#f8f8f8}.markdown-body img{max-width:100%;box-sizing:content-box;background-color:#fff}.markdown-body img[align=right]{padding-left:20px}.markdown-body img[align=left]{padding-right:20px}.markdown-body .emoji{max-width:none;vertical-align:text-top;background-color:transparent}.markdown-body span.frame{display:block;overflow:hidden}.markdown-body span.frame>span{display:block;float:left;width:auto;padding:7px;margin:13px 0 0;overflow:hidden;border:1px solid #ddd}.markdown-body span.frame span img{display:block;float:left}.markdown-body span.frame span span{display:block;padding:5px 0 0;clear:both;color:#333}.markdown-body span.align-center{display:block;overflow:hidden;clear:both}.markdown-body span.align-center>span{display:block;margin:13px auto 0;overflow:hidden;text-align:center}.markdown-body span.align-center span img{margin:0 auto;text-align:center}.markdown-body span.align-right{display:block;overflow:hidden;clear:both}.markdown-body span.align-right>span{display:block;margin:13px 0 0;overflow:hidden;text-align:right}.markdown-body span.align-right span img{margin:0;text-align:right}.markdown-body span.float-left{display:block;float:left;margin-right:13px;overflow:hidden}.markdown-body span.float-left span{margin:13px 0 0}.markdown-body span.float-right{display:block;float:right;margin-left:13px;overflow:hidden}.markdown-body span.float-right>span{display:block;margin:13px auto 0;overflow:hidden;text-align:right}.markdown-body code,.markdown-body tt{padding:0;padding-top:.2em;padding-bottom:.2em;margin:0;font-size:85%;background-color:rgba(0,0,0,.04);border-radius:3px}.markdown-body code:after,.markdown-body code:before,.markdown-body tt:after,.markdown-body tt:before{letter-spacing:-.2em;content:"\00a0"}.markdown-body code br,.markdown-body tt br{display:none}.markdown-body del code{text-decoration:inherit}.markdown-body pre{word-wrap:normal}.markdown-body pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:transparent;border:0}.markdown-body .highlight{margin-bottom:16px}.markdown-body .highlight pre{margin-bottom:0;word-break:normal}.markdown-body .highlight pre,.markdown-body pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f7f7f7;border-radius:3px}.markdown-body pre code,.markdown-body pre tt{display:inline;max-width:auto;padding:0;margin:0;overflow:visible;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}.markdown-body pre code:after,.markdown-body pre code:before,.markdown-body pre tt:after,.markdown-body pre tt:before{content:normal}.markdown-body .csv-data td,.markdown-body .csv-data th{padding:5px;overflow:hidden;font-size:12px;line-height:1;text-align:left;white-space:nowrap}.markdown-body .csv-data .blob-line-num{padding:10px 8px 9px;text-align:right;background:#fff;border:0}.markdown-body .csv-data tr{border-top:0}.markdown-body .csv-data th{font-weight:700;background:#f8f8f8;border-top:0}.news .alert .markdown-body blockquote{padding:0 0 0 40px;border:0 none}.activity-tab .news .alert .commits,.activity-tab .news .markdown-body blockquote{padding-left:0}.task-list-item{list-style-type:none}.task-list-item label{font-weight:400}.task-list-item.enabled label{cursor:pointer}.task-list-item+.task-list-item{margin-top:3px}.task-list-item-checkbox{float:left;margin:.31em 0 .2em -1.3em!important;vertical-align:middle;cursor:default!important}.markdown-body{padding-top:40px;padding-bottom:40px;max-width:758px;overflow:visible!important;position:relative}.markdown-body .emoji{vertical-align:top}.markdown-body pre{border:inherit!important}.markdown-body code{color:inherit!important}.markdown-body pre code .wrapper{display:-moz-inline-flex;display:-ms-inline-flex;display:-o-inline-flex;display:inline-flex}.markdown-body pre code .gutter{float:left;overflow:hidden;-webkit-user-select:none;user-select:none}.markdown-body pre code .gutter.linenumber{text-align:right;position:relative;display:inline-block;cursor:default;z-index:4;padding:0 8px 0 0;min-width:20px;box-sizing:content-box;color:#afafaf!important;border-right:3px solid #6ce26c!important}.markdown-body pre code .gutter.linenumber>span:before{content:attr(data-linenumber)}.markdown-body pre code .code{float:left;margin:0 0 0 16px}.markdown-body .gist .line-numbers{border-left:none;border-top:none;border-bottom:none}.markdown-body .gist .line-data{border:none}.markdown-body .gist table{border-spacing:0;border-collapse:inherit!important}.markdown-body code[data-gist-id]{background:none;padding:0}.markdown-body code[data-gist-id]:after,.markdown-body code[data-gist-id]:before{content:""}.markdown-body code[data-gist-id] .blob-num{border:unset}.markdown-body code[data-gist-id] table{overflow:unset;margin-bottom:unset}.markdown-body code[data-gist-id] table tr{background:unset}.markdown-body[dir=rtl] pre{direction:ltr}.markdown-body[dir=rtl] code{direction:ltr;unicode-bidi:embed}.markdown-body .alert>p:last-child{margin-bottom:0}.markdown-body pre.abc,.markdown-body pre.flow-chart,.markdown-body pre.graphviz,.markdown-body pre.mermaid,.markdown-body pre.sequence-diagram,.markdown-body pre.vega{text-align:center;background-color:inherit;border-radius:0;white-space:inherit;overflow:visible}.markdown-body pre.abc>code,.markdown-body pre.flow-chart>code,.markdown-body pre.graphviz>code,.markdown-body pre.mermaid>code,.markdown-body pre.sequence-diagram>code,.markdown-body pre.vega>code{text-align:left}.markdown-body pre.abc>svg,.markdown-body pre.flow-chart>svg,.markdown-body pre.graphviz>svg,.markdown-body pre.mermaid>svg,.markdown-body pre.sequence-diagram>svg,.markdown-body pre.vega>svg{max-width:100%;height:100%}.markdown-body pre>code.wrap{white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word}.markdown-body .alert>p:last-child,.markdown-body .alert>ul:last-child{margin-bottom:0}.markdown-body summary{display:list-item}.markdown-body summary:focus{outline:none}.markdown-body details summary{cursor:pointer}.markdown-body details:not([open])>:not(summary){display:none}.markdown-body figure{margin:1em 40px}.markdown-body .mark,.markdown-body mark{background-color:#fff1a7}.vimeo,.youtube{cursor:pointer;display:table;text-align:center;background-position:50%;background-repeat:no-repeat;background-size:contain;background-color:#000;overflow:hidden}.vimeo,.youtube{position:relative;width:100%}.youtube{padding-bottom:56.25%}.vimeo img{width:100%;object-fit:contain;z-index:0}.youtube img{object-fit:cover;z-index:0}.vimeo iframe,.youtube iframe,.youtube img{width:100%;height:100%;position:absolute;top:0;left:0}.vimeo iframe,.youtube iframe{vertical-align:middle;z-index:1}.vimeo .icon,.youtube .icon{position:absolute;height:auto;width:auto;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;opacity:.3;transition:opacity .2s;z-index:0}.vimeo:hover .icon,.youtube:hover .icon{opacity:.6;transition:opacity .2s}.slideshare .inner,.speakerdeck .inner{position:relative;width:100%}.slideshare .inner iframe,.speakerdeck .inner iframe{position:absolute;top:0;bottom:0;left:0;right:0;width:100%;height:100%}.figma{display:table;position:relative;width:100%;padding-bottom:56.25%}.figma iframe{position:absolute;top:0;bottom:0;left:0;right:0;width:100%;height:100%;border:1px solid #eee}.MJX_Assistive_MathML{display:none}#MathJax_Message{z-index:1000!important}.ui-infobar{position:relative;z-index:2;max-width:760px;margin:25px auto -25px;color:#777}.toc .invisable-node{list-style-type:none}.ui-toc{position:fixed;bottom:20px;z-index:998}.ui-toc.both-mode{margin-left:8px}.ui-toc.both-mode .ui-toc-label{height:40px;padding:10px 4px;border-top-left-radius:0;border-bottom-left-radius:0}.ui-toc-label{background-color:#e6e6e6;border:none;color:#868686;transition:opacity .2s}.ui-toc .open .ui-toc-label{opacity:1;color:#fff;transition:opacity .2s}.ui-toc-label:focus{opacity:.3;background-color:#ccc;color:#000}.ui-toc-label:hover{opacity:1;background-color:#ccc;transition:opacity .2s}.ui-toc-dropdown{margin-top:20px;margin-bottom:20px;padding-left:10px;padding-right:10px;max-width:45vw;width:25vw;max-height:70vh;overflow:auto;text-align:inherit}.ui-toc-dropdown>.toc{max-height:calc(70vh - 100px);overflow:auto}.ui-toc-dropdown[dir=rtl] .nav{padding-right:0;letter-spacing:.0029em}.ui-toc-dropdown a{overflow:hidden;text-overflow:ellipsis;white-space:pre}.ui-toc-dropdown .nav>li>a{display:block;padding:4px 20px;font-size:13px;font-weight:500;color:#767676}.ui-toc-dropdown .nav>li:first-child:last-child>ul,.ui-toc-dropdown .toc.expand ul{display:block}.ui-toc-dropdown .nav>li>a:focus,.ui-toc-dropdown .nav>li>a:hover{padding-left:19px;color:#000;text-decoration:none;background-color:transparent;border-left:1px solid #000}.ui-toc-dropdown[dir=rtl] .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav>li>a:hover{padding-right:19px;border-left:none;border-right:1px solid #000}.ui-toc-dropdown .nav>.active:focus>a,.ui-toc-dropdown .nav>.active:hover>a,.ui-toc-dropdown .nav>.active>a{padding-left:18px;font-weight:700;color:#000;background-color:transparent;border-left:2px solid #000}.ui-toc-dropdown[dir=rtl] .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav>.active>a{padding-right:18px;border-left:none;border-right:2px solid #000}.ui-toc-dropdown .nav .nav{display:none;padding-bottom:10px}.ui-toc-dropdown .nav>.active>ul{display:block}.ui-toc-dropdown .nav .nav>li>a{padding-top:1px;padding-bottom:1px;padding-left:30px;font-size:12px;font-weight:400}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a{padding-right:30px}.ui-toc-dropdown .nav .nav>li>ul>li>a{padding-top:1px;padding-bottom:1px;padding-left:40px;font-size:12px;font-weight:400}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a{padding-right:40px}.ui-toc-dropdown .nav .nav>li>a:focus,.ui-toc-dropdown .nav .nav>li>a:hover{padding-left:29px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:hover{padding-right:29px}.ui-toc-dropdown .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown .nav .nav>li>ul>li>a:hover{padding-left:39px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:hover{padding-right:39px}.ui-toc-dropdown .nav .nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>a{padding-left:28px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>a{padding-right:28px}.ui-toc-dropdown .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active>a{padding-left:38px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active>a{padding-right:38px}.markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif}html[lang^=ja] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}html .markdown-body[lang^=ja]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html .markdown-body[lang=zh-tw]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html .markdown-body[lang=zh-cn]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}html[lang^=ja] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ\ Ｐゴシック,sans-serif}html[lang=zh-tw] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html[lang=zh-cn] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}html .ui-toc-dropdown[lang^=ja]{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ\ Ｐゴシック,sans-serif}html .ui-toc-dropdown[lang=zh-tw]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html .ui-toc-dropdown[lang=zh-cn]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}.ui-affix-toc{position:fixed;top:0;max-width:15vw;max-height:70vh;overflow:auto}.back-to-top,.expand-toggle,.go-to-bottom{display:block;padding:4px 10px;margin-top:10px;margin-left:10px;font-size:12px;font-weight:500;color:#999}.back-to-top:focus,.back-to-top:hover,.expand-toggle:focus,.expand-toggle:hover,.go-to-bottom:focus,.go-to-bottom:hover{color:#563d7c;text-decoration:none}.back-to-top,.go-to-bottom{margin-top:0}.ui-user-icon{width:20px;height:20px;display:block;border-radius:50%;margin-top:2px;margin-bottom:2px;margin-right:5px;background-position:50%;background-repeat:no-repeat;background-size:cover}.ui-user-icon.small{width:18px;height:18px;display:inline-block;vertical-align:middle;margin:0 0 .2em}.ui-infobar>small>span{line-height:22px}.ui-infobar>small .dropdown{display:inline-block}.ui-infobar>small .dropdown a:focus,.ui-infobar>small .dropdown a:hover{text-decoration:none}.ui-more-info{color:#888;cursor:pointer;vertical-align:middle}.ui-more-info .fa{font-size:16px}.ui-connectedGithub,.ui-published-note{color:#888}.ui-connectedGithub{line-height:23px;white-space:nowrap}.ui-connectedGithub a.file-path{color:#888;text-decoration:none;padding-left:22px}.ui-connectedGithub a.file-path:active,.ui-connectedGithub a.file-path:hover{color:#888;text-decoration:underline}.ui-connectedGithub .fa{font-size:20px}.ui-published-note .fa{font-size:20px;vertical-align:top}.unselectable{-webkit-user-select:none;-o-user-select:none;user-select:none}.selectable{-webkit-user-select:text;-o-user-select:text;user-select:text}@media print{blockquote,div,img,pre,table{page-break-inside:avoid!important}a[href]:after{font-size:12px!important}}.markdown-body.slides{position:relative;z-index:1;color:#222}.markdown-body.slides:before{content:"";display:block;position:absolute;top:0;left:0;right:0;bottom:0;z-index:-1;background-color:currentColor;box-shadow:0 0 0 50vw}.markdown-body.slides section[data-markdown]{position:relative;margin-bottom:1.5em;background-color:#fff;text-align:center}.markdown-body.slides section[data-markdown] code{text-align:left}.markdown-body.slides section[data-markdown]:before{content:"";display:block;padding-bottom:56.23%}.markdown-body.slides section[data-markdown]>div:first-child{position:absolute;top:50%;left:1em;right:1em;transform:translateY(-50%);max-height:100%;overflow:hidden}.markdown-body.slides section[data-markdown]>ul{display:inline-block}.markdown-body.slides>section>section+section:after{content:"";position:absolute;top:-1.5em;right:1em;height:1.5em;border:3px solid #777}.site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,sans-serif}html[lang^=ja] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}body{font-smoothing:subpixel-antialiased!important;-webkit-font-smoothing:subpixel-antialiased!important;-moz-osx-font-smoothing:auto!important;text-shadow:0 0 1em transparent,1px 1px 1.2px rgba(0,0,0,.004);-webkit-overflow-scrolling:touch;letter-spacing:.025em;font-family:Source Sans Pro,Helvetica,Arial,sans-serif}html[lang^=ja] body{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}abbr[data-original-title],abbr[title]{cursor:help}body.modal-open{overflow-y:auto;padding-right:0!important}
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js" integrity="sha256-8E4Is26QH0bD52WoQpcB+R/tcWQtpzlCojrybUd7Mxo=" crossorigin="anonymous"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div id="doc" class="markdown-body container-fluid comment-enabled" data-hard-breaks="true"><h1 id="IML-Final-Project" data-id="IML-Final-Project" data-original-title="" title=""><a class="anchor hidden-xs" href="#IML-Final-Project" title="IML-Final-Project"><span class="octicon octicon-link"></span></a><span>IML Final Project</span></h1><h3 id="姓名：許瀚宇-學號：0812501" data-id="姓名：許瀚宇-學號：0812501" data-original-title="" title=""><a class="anchor hidden-xs" href="#姓名：許瀚宇-學號：0812501" title="姓名：許瀚宇-學號：0812501"><span class="octicon octicon-link"></span></a><span>姓名：許瀚宇    學號：0812501</span></h3><h3 id="Defining-the-Problem" data-id="Defining-the-Problem"><a class="anchor hidden-xs" href="#Defining-the-Problem" title="Defining-the-Problem"><span class="octicon octicon-link"></span></a><span>Defining the Problem</span></h3><p><a href="https://zh.wikipedia.org/wiki/%E5%A8%81%E5%88%A9%E5%9C%A8%E5%93%AA%E9%87%8C%EF%BC%9F" target="_blank" rel="noopener"><span>威利在哪裡？</span></a><span>是一本世界知名的繪本，內容為一張張的複雜繪圖中，找到圖中存在的一位人物—威利</span><img src="https://media.gq.com.tw/photos/5e8306d17a81950008867213/master/w_1600%2Cc_limit/59759ead5f7ec.jpg" alt="" loading="lazy"><br>
+<span>由於有些構圖實在是過於複雜，如藏在壅擠的人潮中，或者藏在圖片不起眼的部位，因此本次以機器學習的方式去偵查威利在圖中的位置</span></p><p><span>本次問題為：在一張已知威利存在的繪本圖當中，找到威利，並用顯眼的方式標記出來</span></p><h3 id="Gathering-Data" data-id="Gathering-Data"><a class="anchor hidden-xs" href="#Gathering-Data" title="Gathering-Data"><span class="octicon octicon-link"></span></a><span>Gathering Data</span></h3><p><span>資料獲取的方式為：在網路上搜尋威利在哪裡，根據google結果，在其中找到幾張解析度較高、較大的圖片下載</span></p><blockquote>
+<p><span>其中多數的圖片從</span><a href="https://www.deviantart.com/where-is-waldo-wally/gallery" target="_blank" rel="noopener"><span>這個網站</span></a><span>上透過google提供圖片搜尋的功能找到內容相近，且較不模糊的結果</span></p>
+</blockquote><h3 id="Data-Processing" data-id="Data-Processing"><a class="anchor hidden-xs" href="#Data-Processing" title="Data-Processing"><span class="octicon octicon-link"></span></a><span>Data Processing</span></h3><ul>
+<li><span>本次的資料與以往不同，是要從一張大圖中，找到符合威利外表的其中一部份，因此換個想法：手動將圖中的威利找出並擷取小圖與其座標，然後在從原本大圖中隨機擷取幾張小圖，為not_wally的部分</span></li>
+<li><span>觀察資料集中，威利的圖片有特定的規則</span>
+<ul>
+<li>
+<p><span>無論是側臉或是正臉，威利的臉與路人精細度不一樣、臉形不一樣、髮型不一樣，而且頭上還有一頂幾乎是只有他會戴的帽子，因此在資料的前處理，有些model使用了HOG。</span></p>
+<blockquote>
+<p><span>然而還是有少數例外，如假威利和女威利</span></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th><span>威利</span></th>
+<th><span>假威利</span></th>
+<th><span>女威利</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://i.imgur.com/vxn275y.jpg" alt="" loading="lazy"></td>
+<td><img src="https://i.imgur.com/eOS39Vh.png" alt="" loading="lazy"></td>
+<td><img src="https://i.imgur.com/tj9sPif.png" alt="" loading="lazy"></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><span>在每次training或testing sub-images時，要讓input size一致，因此對圖片resize</span></p>
+<blockquote>
+<p><span>openCV預設為雙線性內插</span></p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul><h3 id="Building-Models" data-id="Building-Models"><a class="anchor hidden-xs" href="#Building-Models" title="Building-Models"><span class="octicon octicon-link"></span></a><span>Building Models</span></h3><ul>
+<li><span>Selective Search</span>
+<blockquote>
+<p><span>用Scan Window會太慢</span></p>
+</blockquote>
+<ul>
+<li><span>Selective Search是使用segmentation後的結果，套用hierarchical grouping algorithm產生intrest window</span><br>
+<img src="https://blog.gtwang.org/wp-content/uploads/2017/10/selective-search-for-object-detection-20171026-8.png" alt="" loading="lazy"></li>
+<li><span>RGB 每個色彩各取25個bins後標準化</span></li>
+<li><span>每個區域</span><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-107-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><msub><mi>r</mi><mi>i</mi></msub></math>" role="presentation" style="font-size: 113%; position: relative;"><span id="MJXc-Node-1128" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-1129" class="mjx-mrow"><span id="MJXc-Node-1130" class="mjx-msubsup"><span class="mjx-base"><span id="MJXc-Node-1131" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.279em;">r</span></span></span><span class="mjx-sub" style="font-size: 70.7%; vertical-align: -0.212em; padding-right: 0.071em;"><span id="MJXc-Node-1132" class="mjx-mi" style=""><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.445em; padding-bottom: 0.279em;">i</span></span></span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>r</mi><mi>i</mi></msub></math></span></span><script type="math/tex" id="MathJax-Element-107">r_i</script></span><span>有顏色</span><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-108-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><msub><mi>C</mi><mi>i</mi></msub><mo>=</mo><msubsup><mi>c</mi><mi>i</mi><mn>1</mn></msubsup><mo>.</mo><mo>.</mo><mo>.</mo><msubsup><mi>c</mi><mi>i</mi><mi>n</mi></msubsup></math>" role="presentation" style="font-size: 113%; position: relative;"><span id="MJXc-Node-1133" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-1134" class="mjx-mrow"><span id="MJXc-Node-1135" class="mjx-msubsup"><span class="mjx-base" style="margin-right: -0.045em;"><span id="MJXc-Node-1136" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.501em; padding-bottom: 0.279em; padding-right: 0.045em;">C</span></span></span><span class="mjx-sub" style="font-size: 70.7%; vertical-align: -0.212em; padding-right: 0.071em;"><span id="MJXc-Node-1137" class="mjx-mi" style=""><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.445em; padding-bottom: 0.279em;">i</span></span></span></span><span id="MJXc-Node-1138" class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.058em; padding-bottom: 0.335em;">=</span></span><span id="MJXc-Node-1139" class="mjx-msubsup MJXc-space3"><span class="mjx-base"><span id="MJXc-Node-1140" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.279em;">c</span></span></span><span class="mjx-stack" style="vertical-align: -0.311em;"><span class="mjx-sup" style="font-size: 70.7%; padding-bottom: 0.255em; padding-left: 0px; padding-right: 0.071em;"><span id="MJXc-Node-1142" class="mjx-mn" style=""><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.39em; padding-bottom: 0.335em;">1</span></span></span><span class="mjx-sub" style="font-size: 70.7%; padding-right: 0.071em;"><span id="MJXc-Node-1141" class="mjx-mi" style=""><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.445em; padding-bottom: 0.279em;">i</span></span></span></span></span><span id="MJXc-Node-1143" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="margin-top: -0.163em; padding-bottom: 0.335em;">.</span></span><span id="MJXc-Node-1144" class="mjx-mo MJXc-space1"><span class="mjx-char MJXc-TeX-main-R" style="margin-top: -0.163em; padding-bottom: 0.335em;">.</span></span><span id="MJXc-Node-1145" class="mjx-mo MJXc-space1"><span class="mjx-char MJXc-TeX-main-R" style="margin-top: -0.163em; padding-bottom: 0.335em;">.</span></span><span id="MJXc-Node-1146" class="mjx-msubsup MJXc-space1"><span class="mjx-base"><span id="MJXc-Node-1147" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.279em;">c</span></span></span><span class="mjx-stack" style="vertical-align: -0.311em;"><span class="mjx-sup" style="font-size: 70.7%; padding-bottom: 0.255em; padding-left: 0px; padding-right: 0.071em;"><span id="MJXc-Node-1149" class="mjx-mi" style=""><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.279em;">n</span></span></span><span class="mjx-sub" style="font-size: 70.7%; padding-right: 0.071em;"><span id="MJXc-Node-1148" class="mjx-mi" style=""><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.445em; padding-bottom: 0.279em;">i</span></span></span></span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>C</mi><mi>i</mi></msub><mo>=</mo><msubsup><mi>c</mi><mi>i</mi><mn>1</mn></msubsup><mo>.</mo><mo>.</mo><mo>.</mo><msubsup><mi>c</mi><mi>i</mi><mi>n</mi></msubsup></math></span></span><script type="math/tex" id="MathJax-Element-108">C_i=c_i^1...c_i^n</script></span>
+<blockquote>
+<p><span>RGB都使用時</span><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-109-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mi>n</mi><mo>=</mo><mn>75</mn></math>" role="presentation" style="font-size: 113%; position: relative;"><span id="MJXc-Node-1150" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-1151" class="mjx-mrow"><span id="MJXc-Node-1152" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.279em;">n</span></span><span id="MJXc-Node-1153" class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.058em; padding-bottom: 0.335em;">=</span></span><span id="MJXc-Node-1154" class="mjx-mn MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.39em; padding-bottom: 0.39em;">75</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi><mo>=</mo><mn>75</mn></math></span></span><script type="math/tex" id="MathJax-Element-109">n=75</script></span></p>
+</blockquote>
+</li>
+<li><span>相似度</span><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-110-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mi>s</mi><mo stretchy=&quot;false&quot;>(</mo><msub><mi>r</mi><mi>i</mi></msub><mo>,</mo><msub><mi>r</mi><mi>j</mi></msub><mo stretchy=&quot;false&quot;>)</mo><mo>=</mo><mo>&amp;#x2211;</mo><mi>m</mi><mi>i</mi><mi>n</mi><mo stretchy=&quot;false&quot;>(</mo><msubsup><mi>c</mi><mi>i</mi><mi>k</mi></msubsup><mo>,</mo><msubsup><mi>c</mi><mi>j</mi><mi>k</mi></msubsup><mo stretchy=&quot;false&quot;>)</mo></math>" role="presentation" style="font-size: 113%; position: relative;"><span id="MJXc-Node-1155" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-1156" class="mjx-mrow"><span id="MJXc-Node-1157" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.279em;">s</span></span><span id="MJXc-Node-1158" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.445em; padding-bottom: 0.611em;">(</span></span><span id="MJXc-Node-1159" class="mjx-msubsup"><span class="mjx-base"><span id="MJXc-Node-1160" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.279em;">r</span></span></span><span class="mjx-sub" style="font-size: 70.7%; vertical-align: -0.212em; padding-right: 0.071em;"><span id="MJXc-Node-1161" class="mjx-mi" style=""><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.445em; padding-bottom: 0.279em;">i</span></span></span></span><span id="MJXc-Node-1162" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="margin-top: -0.163em; padding-bottom: 0.556em;">,</span></span><span id="MJXc-Node-1163" class="mjx-msubsup MJXc-space1"><span class="mjx-base"><span id="MJXc-Node-1164" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.279em;">r</span></span></span><span class="mjx-sub" style="font-size: 70.7%; vertical-align: -0.212em; padding-right: 0.071em;"><span id="MJXc-Node-1165" class="mjx-mi" style=""><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.445em; padding-bottom: 0.501em;">j</span></span></span></span><span id="MJXc-Node-1166" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.445em; padding-bottom: 0.611em;">)</span></span><span id="MJXc-Node-1167" class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.058em; padding-bottom: 0.335em;">=</span></span><span id="MJXc-Node-1168" class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-size1-R" style="padding-top: 0.501em; padding-bottom: 0.501em;">∑</span></span><span id="MJXc-Node-1169" class="mjx-mi MJXc-space1"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.279em;">m</span></span><span id="MJXc-Node-1170" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.445em; padding-bottom: 0.279em;">i</span></span><span id="MJXc-Node-1171" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.279em;">n</span></span><span id="MJXc-Node-1172" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.445em; padding-bottom: 0.611em;">(</span></span><span id="MJXc-Node-1173" class="mjx-msubsup"><span class="mjx-base"><span id="MJXc-Node-1174" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.279em;">c</span></span></span><span class="mjx-stack" style="vertical-align: -0.311em;"><span class="mjx-sup" style="font-size: 70.7%; padding-bottom: 0.255em; padding-left: 0px; padding-right: 0.071em;"><span id="MJXc-Node-1176" class="mjx-mi" style=""><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.445em; padding-bottom: 0.279em;">k</span></span></span><span class="mjx-sub" style="font-size: 70.7%; padding-right: 0.071em;"><span id="MJXc-Node-1175" class="mjx-mi" style=""><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.445em; padding-bottom: 0.279em;">i</span></span></span></span></span><span id="MJXc-Node-1177" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="margin-top: -0.163em; padding-bottom: 0.556em;">,</span></span><span id="MJXc-Node-1178" class="mjx-msubsup MJXc-space1"><span class="mjx-base"><span id="MJXc-Node-1179" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.279em;">c</span></span></span><span class="mjx-stack" style="vertical-align: -0.311em;"><span class="mjx-sup" style="font-size: 70.7%; padding-bottom: 0.255em; padding-left: 0px; padding-right: 0.071em;"><span id="MJXc-Node-1181" class="mjx-mi" style=""><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.445em; padding-bottom: 0.279em;">k</span></span></span><span class="mjx-sub" style="font-size: 70.7%; padding-right: 0.071em;"><span id="MJXc-Node-1180" class="mjx-mi" style=""><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.445em; padding-bottom: 0.501em;">j</span></span></span></span></span><span id="MJXc-Node-1182" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.445em; padding-bottom: 0.611em;">)</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>s</mi><mo stretchy="false">(</mo><msub><mi>r</mi><mi>i</mi></msub><mo>,</mo><msub><mi>r</mi><mi>j</mi></msub><mo stretchy="false">)</mo><mo>=</mo><mo>∑</mo><mi>m</mi><mi>i</mi><mi>n</mi><mo stretchy="false">(</mo><msubsup><mi>c</mi><mi>i</mi><mi>k</mi></msubsup><mo>,</mo><msubsup><mi>c</mi><mi>j</mi><mi>k</mi></msubsup><mo stretchy="false">)</mo></math></span></span><script type="math/tex" id="MathJax-Element-110">s(r_i, r_j)=\sum min(c_i^k, c_j^k)</script></span></li>
+<li><span>簡而言之就是將物體用Selective Search產生初始區域，然後重複計算各區域間相似值，並把相似性高的區塊合併</span></li>
+</ul>
+</li>
+<li><span>HOG</span>
+<ul>
+<li><span>圖片中的"物件"和周圍會有較大的變化，在離散的資料中，用差分類比微分，即顏色的變化率，分別對圖片兩軸做差分後，平方合開根號即為邊緣強度，然後將兩軸數值取arctan後就可得邊緣方向</span></li>
+<li><span>HOG會把圖片分成數個cell，每個區塊統計某方向的gradient大小方向，分配給不同的角度，然後將不同cell合成一個block並normalize，以減少亮度的影響，再將這些所謂的特徵向量重新拼接成一維向量</span><br>
+<img src="https://miro.medium.com/max/3000/1*gVzSXpWsQ9rpAwm1RwJo4Q.png" alt="" loading="lazy"><br>
+<a href="https://medium.com/curiosity-and-exploration/hog-svm-c2fb01304c0" target="_blank" rel="noopener"><span>來源</span></a></li>
+</ul>
+</li>
+<li><span>KNN (with HOG)</span>
+<ul>
+<li><span>由於我認為所有威利圖片形狀應為一致的，因此不同威利的圖片相似度應比其他還高，這次是將圖片經HOG轉換後，由KNN分別是否為威利</span></li>
+</ul>
+</li>
+<li><span>SVM (with HOG)</span>
+<ul>
+<li><span>因為網路上有許多HOG搭配SVM使用的範例，且openCV甚至也內建了預先訓練好的SVM(辨識人類等)，因此也作為本次的model之一</span></li>
+</ul>
+</li>
+<li><span>CNN</span>
+<ul>
+<li><span>對於影像識別，CNN可以說是其中大宗，許多的影像處理都是有CNN的影子在(RCNN、VGG16等)</span></li>
+</ul>
+</li>
+</ul><h3 id="Training" data-id="Training"><a class="anchor hidden-xs" href="#Training" title="Training"><span class="octicon octicon-link"></span></a><span>Training</span></h3><pre class="graphviz"><!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
+
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: test Pages: 1 -->
+<svg width="781pt" height="222pt" viewBox="0.00 0.00 780.86 221.60" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 217.6)">
+<title>test</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-217.6 776.8602,-217.6 776.8602,4 -4,4"></polygon>
+<!-- raw_data -->
+<g id="node1" class="node">
+<title>raw_data</title>
+<ellipse fill="none" stroke="#ff0000" cx="99" cy="-195.6" rx="46.9246" ry="18"></ellipse>
+<text text-anchor="start" x="72.9586" y="-192.4" font-family="Times,serif" font-size="14.00" fill="#000000">Data</text>
+<text text-anchor="start" x="99.385" y="-192.4" font-family="Times,serif" baseline-shift="sub" font-size="14.00" fill="#000000">train</text>
+</g>
+<!-- Wally -->
+<g id="node2" class="node">
+<title>Wally</title>
+<ellipse fill="none" stroke="#ff0000" cx="154" cy="-106.8" rx="34.769" ry="18"></ellipse>
+<text text-anchor="middle" x="154" y="-102.6" font-family="Times,serif" font-size="14.00" fill="#000000">Wally</text>
+</g>
+<!-- raw_data&#45;&gt;Wally -->
+<g id="edge1" class="edge">
+<title>raw_data-&gt;Wally</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M109.8662,-178.056C117.9031,-165.0801 128.976,-147.2024 138.0199,-132.6006"></path>
+<polygon fill="#0000ff" stroke="#0000ff" points="141.0534,-134.3498 143.3435,-124.0054 135.1024,-130.6639 141.0534,-134.3498"></polygon>
+<text text-anchor="middle" x="48.4057" y="-147" font-family="Times,serif" font-size="14.00" fill="#000000">sampled by me :)</text>
+</g>
+<!-- Not_Wally -->
+<g id="node3" class="node">
+<title>Not_Wally</title>
+<ellipse fill="none" stroke="#ff0000" cx="315" cy="-106.8" rx="53.8924" ry="18"></ellipse>
+<text text-anchor="middle" x="315" y="-102.6" font-family="Times,serif" font-size="14.00" fill="#000000">Not_Wally</text>
+</g>
+<!-- raw_data&#45;&gt;Not_Wally -->
+<g id="edge2" class="edge">
+<title>raw_data-&gt;Not_Wally</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M131.3374,-182.3057C168.5692,-166.9993 229.9102,-141.7814 271.3525,-124.744"></path>
+<polygon fill="#0000ff" stroke="#0000ff" points="272.7358,-127.9596 280.6539,-120.9201 270.0741,-121.4853 272.7358,-127.9596"></polygon>
+<text text-anchor="middle" x="216.9604" y="-147" font-family="Times,serif" font-size="14.00" fill="#000000">random sample</text>
+</g>
+<!-- Wally_HOG -->
+<g id="node4" class="node">
+<title>Wally_HOG</title>
+<ellipse fill="none" stroke="#ff0000" cx="496" cy="-106.8" rx="55.5966" ry="18"></ellipse>
+<text text-anchor="start" x="463.7349" y="-103.6" font-family="Times,serif" font-size="14.00" fill="#000000">Wally</text>
+<text text-anchor="start" x="497.9453" y="-103.6" font-family="Times,serif" baseline-shift="sub" font-size="14.00" fill="#000000">HOG</text>
+</g>
+<!-- Wally&#45;&gt;Wally_HOG -->
+<g id="edge3" class="edge">
+<title>Wally-&gt;Wally_HOG</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M186.1854,-113.6561C235.2192,-124.1011 323,-142.8 323,-142.8 323,-142.8 388.8732,-129.0923 439.3234,-118.594"></path>
+<polygon fill="#0000ff" stroke="#0000ff" points="440.1065,-122.0061 449.1837,-116.5421 438.6804,-115.1529 440.1065,-122.0061"></polygon>
+<text text-anchor="middle" x="323" y="-147" font-family="Times,serif" font-size="14.00" fill="#000000">HOG Descriptor</text>
+</g>
+<!-- CNN -->
+<g id="node8" class="node">
+<title>CNN</title>
+<ellipse fill="none" stroke="#ff0000" cx="270" cy="-18" rx="31.339" ry="18"></ellipse>
+<text text-anchor="middle" x="270" y="-13.8" font-family="Times,serif" font-size="14.00" fill="#000000">CNN</text>
+</g>
+<!-- Wally&#45;&gt;CNN -->
+<g id="edge9" class="edge">
+<title>Wally-&gt;CNN</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M173.6778,-91.7363C192.7373,-77.1459 221.7902,-54.9055 243.0049,-38.6652"></path>
+<polygon fill="#0000ff" stroke="#0000ff" points="245.1842,-41.4048 250.9971,-32.547 240.9291,-35.8464 245.1842,-41.4048"></polygon>
+<text text-anchor="middle" x="244.7735" y="-58.2" font-family="Times,serif" font-size="14.00" fill="#000000">training</text>
+</g>
+<!-- Not_Wally_HOG -->
+<g id="node5" class="node">
+<title>Not_Wally_HOG</title>
+<ellipse fill="none" stroke="#ff0000" cx="698" cy="-106.8" rx="74.7207" ry="18"></ellipse>
+<text text-anchor="start" x="651.7363" y="-103.6" font-family="Times,serif" font-size="14.00" fill="#000000">Not_Wally</text>
+<text text-anchor="start" x="713.9439" y="-103.6" font-family="Times,serif" baseline-shift="sub" font-size="14.00" fill="#000000">HOG</text>
+</g>
+<!-- Not_Wally&#45;&gt;Not_Wally_HOG -->
+<g id="edge4" class="edge">
+<title>Not_Wally-&gt;Not_Wally_HOG</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M361.612,-116.0709C415.241,-126.7374 496,-142.8 496,-142.8 496,-142.8 569.4055,-129.7178 627.7157,-119.3259"></path>
+<polygon fill="#0000ff" stroke="#0000ff" points="628.4362,-122.7527 637.667,-117.5524 627.208,-115.8613 628.4362,-122.7527"></polygon>
+<text text-anchor="middle" x="496" y="-147" font-family="Times,serif" font-size="14.00" fill="#000000">HOG Descriptor</text>
+</g>
+<!-- Not_Wally&#45;&gt;CNN -->
+<g id="edge10" class="edge">
+<title>Not_Wally-&gt;CNN</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M305.8936,-88.83C299.4667,-76.1476 290.7475,-58.9418 283.5122,-44.6641"></path>
+<polygon fill="#0000ff" stroke="#0000ff" points="286.429,-42.6769 278.7866,-35.3389 280.1849,-45.8411 286.429,-42.6769"></polygon>
+<text text-anchor="middle" x="318.7735" y="-58.2" font-family="Times,serif" font-size="14.00" fill="#000000">training</text>
+</g>
+<!-- KNN -->
+<g id="node6" class="node">
+<title>KNN</title>
+<ellipse fill="none" stroke="#ff0000" cx="467" cy="-18" rx="31.9012" ry="18"></ellipse>
+<text text-anchor="middle" x="467" y="-13.8" font-family="Times,serif" font-size="14.00" fill="#000000">KNN</text>
+</g>
+<!-- Wally_HOG&#45;&gt;KNN -->
+<g id="edge5" class="edge">
+<title>Wally_HOG-&gt;KNN</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M490.1314,-88.83C486.0827,-76.4327 480.6225,-59.713 476.0237,-45.6312"></path>
+<polygon fill="#0000ff" stroke="#0000ff" points="479.2914,-44.3626 472.8599,-35.9433 472.6373,-46.5358 479.2914,-44.3626"></polygon>
+<text text-anchor="middle" x="442.7735" y="-58.2" font-family="Times,serif" font-size="14.00" fill="#000000">training</text>
+</g>
+<!-- SVM -->
+<g id="node7" class="node">
+<title>SVM</title>
+<ellipse fill="none" stroke="#ff0000" cx="716" cy="-18" rx="31.9205" ry="18"></ellipse>
+<text text-anchor="middle" x="716" y="-13.8" font-family="Times,serif" font-size="14.00" fill="#000000">SVM</text>
+</g>
+<!-- Wally_HOG&#45;&gt;SVM -->
+<g id="edge6" class="edge">
+<title>Wally_HOG-&gt;SVM</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M530.8597,-92.7294C571.8009,-76.204 639.3437,-48.9413 680.5421,-32.3121"></path>
+<polygon fill="#0000ff" stroke="#0000ff" points="681.9523,-35.5173 689.9153,-28.5287 679.3322,-29.0262 681.9523,-35.5173"></polygon>
+<text text-anchor="middle" x="563.7735" y="-58.2" font-family="Times,serif" font-size="14.00" fill="#000000">training</text>
+</g>
+<!-- Not_Wally_HOG&#45;&gt;KNN -->
+<g id="edge7" class="edge">
+<title>Not_Wally_HOG-&gt;KNN</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M658.2897,-91.5347C614.7004,-74.7783 545.3264,-48.1099 503.1888,-31.9116"></path>
+<polygon fill="#0000ff" stroke="#0000ff" points="504.1969,-28.5494 493.607,-28.2281 501.6852,-35.0833 504.1969,-28.5494"></polygon>
+<text text-anchor="middle" x="650.7735" y="-58.2" font-family="Times,serif" font-size="14.00" fill="#000000">training</text>
+</g>
+<!-- Not_Wally_HOG&#45;&gt;SVM -->
+<g id="edge8" class="edge">
+<title>Not_Wally_HOG-&gt;SVM</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M701.7296,-88.4006C704.2078,-76.175 707.5091,-59.8887 710.3122,-46.0599"></path>
+<polygon fill="#0000ff" stroke="#0000ff" points="713.7803,-46.568 712.3368,-36.072 706.9198,-45.1774 713.7803,-46.568"></polygon>
+<text text-anchor="middle" x="741.7735" y="-58.2" font-family="Times,serif" font-size="14.00" fill="#000000">training</text>
+</g>
+</g>
+</svg>
+</pre><h3 id="Testing" data-id="Testing"><a class="anchor hidden-xs" href="#Testing" title="Testing"><span class="octicon octicon-link"></span></a><span>Testing</span></h3><pre class="graphviz"><!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
+
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: test Pages: 1 -->
+<svg width="293pt" height="295pt" viewBox="0.00 0.00 293.37 294.60" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 290.6)">
+<title>test</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-290.6 289.37,-290.6 289.37,4 -4,4"></polygon>
+<!-- raw_data -->
+<g id="node1" class="node">
+<title>raw_data</title>
+<ellipse fill="none" stroke="#ff0000" cx="176.9506" cy="-268.6" rx="42.8499" ry="18"></ellipse>
+<text text-anchor="start" x="154.0172" y="-265.4" font-family="Times,serif" font-size="14.00" fill="#000000">Data</text>
+<text text-anchor="start" x="180.4436" y="-265.4" font-family="Times,serif" baseline-shift="sub" font-size="14.00" fill="#000000">test</text>
+</g>
+<!-- intrest_window -->
+<g id="node2" class="node">
+<title>intrest_window</title>
+<ellipse fill="none" stroke="#ff0000" cx="176.9506" cy="-179.8" rx="49.2512" ry="18"></ellipse>
+<text text-anchor="start" x="149.3412" y="-176.6" font-family="Times,serif" font-size="14.00" fill="#000000">Pos</text>
+<text text-anchor="start" x="169.5684" y="-176.6" font-family="Times,serif" baseline-shift="sub" font-size="14.00" fill="#000000">intrest</text>
+</g>
+<!-- raw_data&#45;&gt;intrest_window -->
+<g id="edge1" class="edge">
+<title>raw_data-&gt;intrest_window</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M176.9506,-250.2006C176.9506,-238.0949 176.9506,-222.0076 176.9506,-208.2674"></path>
+<polygon fill="#0000ff" stroke="#0000ff" points="180.4506,-207.872 176.9506,-197.872 173.4506,-207.8721 180.4506,-207.872"></polygon>
+<text text-anchor="middle" x="221.0625" y="-220" font-family="Times,serif" font-size="14.00" fill="#000000">selective search</text>
+</g>
+<!-- HOG_data -->
+<g id="node3" class="node">
+<title>HOG_data</title>
+<ellipse fill="none" stroke="#ff0000" cx="99.9506" cy="-91" rx="50.3586" ry="18"></ellipse>
+<text text-anchor="start" x="71.5775" y="-87.8" font-family="Times,serif" font-size="14.00" fill="#000000">Data</text>
+<text text-anchor="start" x="98.0039" y="-87.8" font-family="Times,serif" baseline-shift="sub" font-size="14.00" fill="#000000">HOG</text>
+</g>
+<!-- intrest_window&#45;&gt;HOG_data -->
+<g id="edge2" class="edge">
+<title>intrest_window-&gt;HOG_data</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M161.7378,-162.256C150.274,-149.0353 134.3977,-130.726 121.6091,-115.9777"></path>
+<polygon fill="#0000ff" stroke="#0000ff" points="124.0653,-113.4677 114.8697,-108.2054 118.7766,-118.0536 124.0653,-113.4677"></polygon>
+<text text-anchor="middle" x="153.4019" y="-131.2" font-family="Times,serif" font-size="14.00" fill="#000000">HOG Descriptor</text>
+</g>
+<!-- CNN -->
+<g id="node4" class="node">
+<title>CNN</title>
+<ellipse fill="none" stroke="#ff0000" cx="253.9506" cy="-91" rx="31.339" ry="18"></ellipse>
+<text text-anchor="middle" x="253.9506" y="-86.8" font-family="Times,serif" font-size="14.00" fill="#000000">CNN</text>
+</g>
+<!-- intrest_window&#45;&gt;CNN -->
+<g id="edge3" class="edge">
+<title>intrest_window-&gt;CNN</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M192.1633,-162.256C203.849,-148.7794 220.1197,-130.0154 233.031,-115.1254"></path>
+<polygon fill="#0000ff" stroke="#0000ff" points="235.901,-117.1581 239.808,-107.3099 230.6123,-112.5722 235.901,-117.1581"></polygon>
+</g>
+<!-- KNN -->
+<g id="node5" class="node">
+<title>KNN</title>
+<ellipse fill="none" stroke="#ff0000" cx="31.9506" cy="-18" rx="31.9012" ry="18"></ellipse>
+<text text-anchor="middle" x="31.9506" y="-13.8" font-family="Times,serif" font-size="14.00" fill="#000000">KNN</text>
+</g>
+<!-- HOG_data&#45;&gt;KNN -->
+<g id="edge4" class="edge">
+<title>HOG_data-&gt;KNN</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M83.8355,-73.7C74.9472,-64.1582 63.7792,-52.169 54.0835,-41.7604"></path>
+<polygon fill="#0000ff" stroke="#0000ff" points="56.3953,-39.1072 47.0182,-34.1756 51.2733,-43.8785 56.3953,-39.1072"></polygon>
+</g>
+<!-- SVM -->
+<g id="node6" class="node">
+<title>SVM</title>
+<ellipse fill="none" stroke="#ff0000" cx="167.9506" cy="-18" rx="31.9205" ry="18"></ellipse>
+<text text-anchor="middle" x="167.9506" y="-13.8" font-family="Times,serif" font-size="14.00" fill="#000000">SVM</text>
+</g>
+<!-- HOG_data&#45;&gt;SVM -->
+<g id="edge5" class="edge">
+<title>HOG_data-&gt;SVM</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M116.0656,-73.7C124.9539,-64.1582 136.1219,-52.169 145.8176,-41.7604"></path>
+<polygon fill="#0000ff" stroke="#0000ff" points="148.6279,-43.8785 152.8829,-34.1756 143.5058,-39.1072 148.6279,-43.8785"></polygon>
+</g>
+</g>
+</svg>
+</pre><h3 id="Quantification-performance" data-id="Quantification-performance"><a class="anchor hidden-xs" href="#Quantification-performance" title="Quantification-performance"><span class="octicon octicon-link"></span></a><span>Quantification performance</span></h3><ul>
+<li><span>由於這次的project無法用以往分法確認對錯，因此改用另外一種作法</span></li>
+<li><span>取得威利的方框左上角座標與真實威利左上角座標的最近距離</span></li>
+<li><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-98-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mo>&amp;lt;</mo><mi>t</mi><mi>o</mi><mi>l</mi><mi>e</mi><mi>r</mi><mi>a</mi><mi>n</mi><mi>c</mi><mi>e</mi></math>" role="presentation" style="font-size: 113%; position: relative;"><span id="MJXc-Node-1006" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-1007" class="mjx-mrow"><span id="MJXc-Node-1008" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.279em; padding-bottom: 0.39em;">&lt;</span></span><span id="MJXc-Node-1009" class="mjx-mi MJXc-space3"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.39em; padding-bottom: 0.279em;">t</span></span><span id="MJXc-Node-1010" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.279em;">o</span></span><span id="MJXc-Node-1011" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.445em; padding-bottom: 0.279em;">l</span></span><span id="MJXc-Node-1012" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.279em;">e</span></span><span id="MJXc-Node-1013" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.279em;">r</span></span><span id="MJXc-Node-1014" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.279em;">a</span></span><span id="MJXc-Node-1015" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.279em;">n</span></span><span id="MJXc-Node-1016" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.279em;">c</span></span><span id="MJXc-Node-1017" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.279em;">e</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>&lt;</mo><mi>t</mi><mi>o</mi><mi>l</mi><mi>e</mi><mi>r</mi><mi>a</mi><mi>n</mi><mi>c</mi><mi>e</mi></math></span></span><script type="math/tex" id="MathJax-Element-98"><tolerance</script></span><span>為正確，反之則無</span></li>
+<li><span>然後透過不斷將tolerance加大，觀察accuracy變化</span></li>
+<li><span>化成圖表如下</span><br>
+<img src="https://i.imgur.com/qrsJWlW.png" alt="" loading="lazy"></li>
+</ul><h3 id="Conclusion-amp-Application" data-id="Conclusion-amp-Application"><a class="anchor hidden-xs" href="#Conclusion-amp-Application" title="Conclusion-amp-Application"><span class="octicon octicon-link"></span></a><span>Conclusion &amp; Application</span></h3><ul>
+<li><s><span>本次實驗結果可以說是相當失敗？</span></s><span>，fail case discuss</span>
+<ul>
+<li>
+<p><span>出自於威利在原圖中的大小差異過大，在resize同一大小後，差異可以看到不小</span></p>
+</li>
+<li>
+<p><span>背景可能也是影響判讀的原因</span></p>
+</li>
+<li>
+<p><span>當威利的臉明顯被其他物體遮擋，會嚴重影響其正確性</span></p>
+</li>
+<li>
+<p><span>無法保證intrest window形狀，進行resize會把圖片變形</span></p>
+<table>
+<thead>
+<tr>
+<th><span>模糊</span></th>
+<th><span>遮擋</span></th>
+<th><span>背景太花</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://i.imgur.com/Ws6FEmp.png" alt="" loading="lazy"></td>
+<td><img src="https://i.imgur.com/IsoMMkn.png" alt="" loading="lazy"></td>
+<td><img src="https://i.imgur.com/efXplfS.png" alt="" loading="lazy"></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><span>此外，先前提過的女威利及假威利，確實如我所說有在測試中被誤認為威利</span></p>
+</li>
+<li>
+<p><span>最後，由於非威利與威利的比例過於懸殊，即便非威利的誤認率降低，最後還是有一些false positive</span></p>
+</li>
+</ul>
+</li>
+<li><span>這種找威利的方法能適用於任何物體辨識</span>
+<blockquote>
+<p><span>人臉辨識、</span><s><span>中國信用評分監視器</span></s></p>
+</blockquote>
+</li>
+</ul></div>
+    <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
+        <div class="pull-right dropdown">
+            <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" title="Table of content">
+                <i class="fa fa-bars"></i>
+            </a>
+            <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
+                <div class="toc"><ul class="nav">
+<li class=""><a href="#IML-Final-Project" title="IML Final Project">IML Final Project</a><ul class="nav">
+<li class=""><a href="#姓名：許瀚宇-學號：0812501" title="姓名：許瀚宇    學號：0812501">姓名：許瀚宇    學號：0812501</a></li>
+<li class=""><a href="#Defining-the-Problem" title="Defining the Problem">Defining the Problem</a></li>
+<li class=""><a href="#Gathering-Data" title="Gathering Data">Gathering Data</a></li>
+<li class=""><a href="#Data-Processing" title="Data Processing">Data Processing</a></li>
+<li class=""><a href="#Building-Models" title="Building Models">Building Models</a></li>
+<li><a href="#Training" title="Training">Training</a></li>
+<li><a href="#Testing" title="Testing">Testing</a></li>
+<li><a href="#Quantification-performance" title="Quantification performance">Quantification performance</a></li>
+<li><a href="#Conclusion-amp-Application" title="Conclusion &amp; Application">Conclusion &amp; Application</a></li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">全部展開</a><a class="back-to-top" href="#">回到頂部</a><a class="go-to-bottom" href="#">移至底部</a></div>
+            </ul>
+        </div>
+    </div>
+    <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix" style="top:17px;display:none;" null null>
+        <div class="toc"><ul class="nav">
+<li class=""><a href="#IML-Final-Project" title="IML Final Project">IML Final Project</a><ul class="nav">
+<li class=""><a href="#姓名：許瀚宇-學號：0812501" title="姓名：許瀚宇    學號：0812501">姓名：許瀚宇    學號：0812501</a></li>
+<li class=""><a href="#Defining-the-Problem" title="Defining the Problem">Defining the Problem</a></li>
+<li class=""><a href="#Gathering-Data" title="Gathering Data">Gathering Data</a></li>
+<li class=""><a href="#Data-Processing" title="Data Processing">Data Processing</a></li>
+<li class=""><a href="#Building-Models" title="Building Models">Building Models</a></li>
+<li><a href="#Training" title="Training">Training</a></li>
+<li><a href="#Testing" title="Testing">Testing</a></li>
+<li><a href="#Quantification-performance" title="Quantification performance">Quantification performance</a></li>
+<li><a href="#Conclusion-amp-Application" title="Conclusion &amp; Application">Conclusion &amp; Application</a></li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">全部展開</a><a class="back-to-top" href="#">回到頂部</a><a class="go-to-bottom" href="#">移至底部</a></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.6.0/gist-embed.min.js" integrity="sha256-KyF2D6xPIJUW5sUDSs93vWyZm+1RzIpKCexxElmxl8g=" crossorigin="anonymous" defer></script>
+    <script>
+        var markdown = $(".markdown-body");
+        //smooth all hash trigger scrolling
+        function smoothHashScroll() {
+            var hashElements = $("a[href^='#']").toArray();
+            for (var i = 0; i < hashElements.length; i++) {
+                var element = hashElements[i];
+                var $element = $(element);
+                var hash = element.hash;
+                if (hash) {
+                    $element.on('click', function (e) {
+                        // store hash
+                        var hash = this.hash;
+                        if ($(hash).length <= 0) return;
+                        // prevent default anchor click behavior
+                        e.preventDefault();
+                        // animate
+                        $('body, html').stop(true, true).animate({
+                            scrollTop: $(hash).offset().top
+                        }, 100, "linear", function () {
+                            // when done, add hash to url
+                            // (default click behaviour)
+                            window.location.hash = hash;
+                        });
+                    });
+                }
+            }
+        }
+
+        smoothHashScroll();
+        var toc = $('.ui-toc');
+        var tocAffix = $('.ui-affix-toc');
+        var tocDropdown = $('.ui-toc-dropdown');
+        //toc
+        tocDropdown.click(function (e) {
+            e.stopPropagation();
+        });
+
+        var enoughForAffixToc = true;
+
+        function generateScrollspy() {
+            $(document.body).scrollspy({
+                target: ''
+            });
+            $(document.body).scrollspy('refresh');
+            if (enoughForAffixToc) {
+                toc.hide();
+                tocAffix.show();
+            } else {
+                tocAffix.hide();
+                toc.show();
+            }
+            $(document.body).scroll();
+        }
+
+        function windowResize() {
+            //toc right
+            var paddingRight = parseFloat(markdown.css('padding-right'));
+            var right = ($(window).width() - (markdown.offset().left + markdown.outerWidth() - paddingRight));
+            toc.css('right', right + 'px');
+            //affix toc left
+            var newbool;
+            var rightMargin = (markdown.parent().outerWidth() - markdown.outerWidth()) / 2;
+            //for ipad or wider device
+            if (rightMargin >= 133) {
+                newbool = true;
+                var affixLeftMargin = (tocAffix.outerWidth() - tocAffix.width()) / 2;
+                var left = markdown.offset().left + markdown.outerWidth() - affixLeftMargin;
+                tocAffix.css('left', left + 'px');
+            } else {
+                newbool = false;
+            }
+            if (newbool != enoughForAffixToc) {
+                enoughForAffixToc = newbool;
+                generateScrollspy();
+            }
+        }
+        $(window).resize(function () {
+            windowResize();
+        });
+        $(document).ready(function () {
+            windowResize();
+            generateScrollspy();
+        });
+
+        //remove hash
+        function removeHash() {
+            window.location.hash = '';
+        }
+
+        var backtotop = $('.back-to-top');
+        var gotobottom = $('.go-to-bottom');
+
+        backtotop.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToTop)
+                scrollToTop();
+            removeHash();
+        });
+        gotobottom.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToBottom)
+                scrollToBottom();
+            removeHash();
+        });
+
+        var toggle = $('.expand-toggle');
+        var tocExpand = false;
+
+        checkExpandToggle();
+        toggle.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            tocExpand = !tocExpand;
+            checkExpandToggle();
+        })
+
+        function checkExpandToggle () {
+            var toc = $('.ui-toc-dropdown .toc');
+            var toggle = $('.expand-toggle');
+            if (!tocExpand) {
+                toc.removeClass('expand');
+                toggle.text('Expand all');
+            } else {
+                toc.addClass('expand');
+                toggle.text('Collapse all');
+            }
+        }
+
+        function scrollToTop() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: 0
+            }, 100, "linear");
+        }
+
+        function scrollToBottom() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: $(document.body)[0].scrollHeight
+            }, 100, "linear");
+        }
+    </script>
+</body>
+
+</html>
